@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 06 - Vuejs</title>
+</head>
+
+<body>
+    <div id="app">
+      <h1>{{ titulo }} </h1>  
+      <img :src="imagem" :alt="alt" title="" id="" :data-img-large="imagem">
+      <p class="red">Este é um paragáfo para teste.</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aula 06 Vuejs v-bind pode ser so os :",
+                imagem: "data:image/png;base64,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",
+                alt: "Vuejs is awesome!" 
+               
+            }
+
+        });
+    </script>
+</body>
+
+</html>
